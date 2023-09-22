@@ -1,0 +1,24 @@
+<div class="row mt-4">
+  <div class="col-10 m-4">
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of studentsList; let i = index">
+          <td>{{ student.name }}</td>
+          <td>{{ student.age }}</td>
+          <td>
+            <button class="btn btn-danger btn-sm" (click)="removeStudent(i)">
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
